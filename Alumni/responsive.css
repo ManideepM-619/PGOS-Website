@@ -1,0 +1,349 @@
+
+
+/* Header Section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* Responsive adjustments for background image */
+@media (max-width: 1200px) {
+    header {
+        background-size: cover; /* Adjusts image size for medium screens */
+        height: 500px; /* Adjust header height */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background-size: cover; /* Keeps the image covering the header area */
+        height: 400px; /* Adjust height for tablet-sized screens */
+        background-position: top; /* Align the image to the top */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        background-size: auto; /* Scales down the image for smaller screens */
+        height: 400px; /* Reduce header height for mobile screens */
+        /* background-position: center;  */
+    }
+}
+/* Navbar Section>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding-top: 1rem;
+    position: relative; /* Added for hamburger positioning */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-items {
+    gap: 20px;
+    display: none; /* Initially hidden on mobile */
+}
+.button-a {
+    background-color: #BCFBBA;
+    color: #081A28;
+    border: none;
+    padding: 18px 40px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 401;
+    line-height: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments for button */
+@media (max-width: 768px) {
+    .button-a {
+        padding: 14px 32px; /* Slightly reduce padding for smaller screens */
+        font-size: 12px; /* Reduce font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .button-a {
+        padding: 10px 24px; /* Further reduce padding for mobile */
+        font-size: 11px; /* Smaller font for mobile */
+    }
+}
+
+.banner {
+    text-align: center;
+    background-size: cover;
+    padding: 4rem 1rem;
+    margin-top: 3rem;
+}
+
+/* Responsive adjustments for banner padding */
+@media (max-width: 768px) {
+    .banner {
+        padding: 3rem 1rem; /* Reduce padding for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 2rem 1rem; /* Reduce padding for mobile screens */
+    }
+}
+
+.quote {
+    font-family: Poppins;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 93.75px;
+    color: white;
+}
+
+/* Responsive adjustments for quote font-size */
+@media (max-width: 1024px) {
+    .quote {
+        font-size: 60px; /* Reduce font size for medium screens */
+        line-height: 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    .quote {
+        font-size: 45px; /* Smaller font size for tablets */
+        line-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote {
+        font-size: 35px; /* Small font size for mobile */
+        line-height: 50px;
+    }
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Responsive adjustments for banner h1 */
+@media (max-width: 1024px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+}
+
+h6 {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Responsive adjustments for h6 */
+@media (max-width: 1024px) {
+    h6 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    h6 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h6 {
+        font-size: 14px;
+    }
+}
+
+/* .button-a {
+    background-color: #BCFBBA;
+    color: #081A28;
+    border: none;
+    padding: 18px 40px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 401;
+    line-height: 16px;
+}
+
+.banner {
+    text-align: center;
+    background-size: cover;
+    padding: 4rem 1rem;
+    margin-top: 3rem;
+}
+
+.quote {
+    font-family: Poppins;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 93.75px;
+    color: white;
+}
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+h6 {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    align-content: center;
+    color: white;
+} */
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px; /* Aligns the hamburger icon on the right */
+    top: 1rem;
+}
+
+/* Responsive CSS */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    /* Initially hide the nav items on mobile */
+.nav-items {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(2, 118, 27, 0.8);
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Show the nav items when the 'show' class is applied */
+.nav-items.show {
+    display: flex;
+}
+
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Tablet and Larger Screens */
+@media (min-width: 769px) {
+    .nav-items {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+/* Header Section end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Breadcrum Section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.breadcrum {
+    display: flex;
+    gap: 5px;
+    font-weight: bold;
+    padding-left: 80px;
+}
+
+/* Quote 2 */
+
+.quote2 {
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .quote2 {
+        font-size: 26px;
+        line-height: 48px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .quote2 {
+        font-size: 42px;
+        line-height: 54px;
+    }
+}
+
+/* Quote 3 */
+.quote3 {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28.8px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .quote3 {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .quote3 {
+        font-size: 17px;
+        line-height: 26px;
+    }
+}
+
+/* Background Light */
+.bg-light {
+    --bs-bg-opacity: 2;
+    background-color: rgb(255, 255, 255) !important;
+}
+
+@media (max-width: 768px) {
+    .bg-light {
+        padding: 10px;
+        background-color: rgb(245, 245, 245) !important; /* Adjust background for small screens if necessary */
+    }
+}
+/* Breadcrumb Section End */
+
+/* Profile card Responsive Styles */

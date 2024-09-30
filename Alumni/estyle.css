@@ -1,0 +1,999 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #1a1a1a;
+}
+
+/* Header Section >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+header {
+    background-color: white;
+    background-image: url('./Assets/navimage.png');
+    background-repeat:repeat-x;
+    background-size:auto; /* Ensures the image covers the entire header area */
+    background-position: center; /* Keeps the image centered */
+    height: 550px;
+}
+.card-wrapper {
+    display: flex;
+    gap: 60px; /* Default gap between cards */
+    justify-content: flex-start;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-behavior: smooth;
+    padding: 10px;
+    width: 100%;
+    /* Hide scrollbar */
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.card-wrapper::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+.profile-card {
+    padding: 0; /* Remove padding for better fit */
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 24px 48px 0px #33090014;
+    min-width: 424px; /* Default minimum width for larger screens */
+    flex-shrink: 0; /* Prevent cards from shrinking too much */
+}
+
+/* Image styling */
+.profile-image {
+    object-fit: cover;
+    border-radius: 30px;
+    width: 100%; /* Image fills card width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Card Name */
+.profile-card-name {
+    font-family: Poppins;
+    font-size: 24px; /* Default font size for larger screens */
+    font-weight: 400;
+    line-height: 48px; /* Adjust line height */
+    text-align: left;
+    color: #11007c;
+    padding-left: 30px; /* Default padding */
+}
+
+/* Education and Role Styles */
+.profile-edu {
+    font-family: Lato;
+    font-size: 14px; /* Default font size for larger screens */
+    font-weight: 500;
+    text-align: left;
+    color: #333333;
+    padding-left: 30px; /* Default padding */
+    margin-top: 10px; /* Adjust margin */
+}
+
+.profile-role {
+    font-family: Lato;
+    font-size: 18px; /* Default font size for larger screens */
+    font-weight: 500;
+    text-align: left;
+    color: #EA760B;
+    padding-left: 30px; /* Default padding */
+    margin-bottom: 30px; /* Adjust margin */
+}
+
+/* Social Media Icons */
+.profile-social {
+    justify-content: end;
+    display: inline-grid;
+    padding: 10px 20px 20px 10px;
+    align-content: end;
+}
+
+/* Profile Link Styles */
+.profile-ln {
+    border-radius: 10px;
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles (below 768px) */
+@media (max-width: 768px) {
+    .card-wrapper {
+        gap: 10px; /* Less gap for mobile */
+    }
+
+    .profile-card {
+        min-width: 150px; /* Smaller card width for mobile */
+        max-width: 200px; /* Keep maximum width manageable */
+    }
+
+    .profile-card-name {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding-left: 15px; /* Reduced padding */
+    }
+
+    .profile-edu {
+        font-size: 12px; /* Smaller font size for mobile */
+        padding-left: 15px; /* Reduced padding */
+    }
+
+    .profile-role {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding-left: 15px; /* Reduced padding */
+    }
+}
+
+/* Tablet Styles (between 769px and 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card-wrapper {
+        gap: 15px; /* Medium gap for tablet */
+    }
+
+    .profile-card {
+        min-width: 250px; /* Adjust for slightly larger tablet cards */
+        max-width: 300px; /* Allow slightly larger cards */
+    }
+
+    .profile-card-name {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .profile-edu {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .profile-role {
+        font-size: 16px; /* Adjust font size */
+    }
+}
+
+/* Desktop Styles (above 1024px) */
+@media (min-width: 1025px) {
+    .profile-card {
+        min-width: 424px; /* Original minimum width for desktop */
+    }
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem; 
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    color: #007bff; 
+}
+.bi {
+    background-color: #f3f3f3;
+    border: none;
+    color: #1B4C8F;
+    font-size: 40px;
+}
+/* Profile Card Section End */
+
+/* Statistics Section */
+.triangle-down2 {
+    background-image: url('./Assets/Group 2295.png'); /* Background image */
+    background-size: cover; /* Cover the section without repeating */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* No repeating of the image */
+    width: 100%;
+    height: auto; /* Dynamic height based on content */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    position: relative; /* Ensure content remains inside the container */
+}
+
+@media (max-width: 768px) {
+    .triangle-down2 {
+        padding: 10px 5px;
+        background-size: contain; /* Adjust the background size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .triangle-down2 {
+        padding: 10px 5px;
+        background-size: cover;
+    }
+}
+
+.statistics-content {
+    z-index: 2;
+    width: 100%; /* Spread across the full width of the .triangle-down2 container */
+    padding: 50px 0 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%; /* Remove max-width to allow full horizontal spread */
+    margin: 0; /* Remove any margins */
+}
+/* Statistics Icons and Content */
+.statistics-content .row {
+    display: flex;
+    justify-content: space-around; /* Spread items evenly */
+    flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+    width: 100%; /* Make sure row spreads across the full width */
+    margin: 0 auto; /* Center the content inside the container */
+}
+
+.statistics-content .col-6 {
+    width: auto; /* Flexible width for responsiveness */
+    flex: 1;
+    max-width: 200px; /* Adjust icon and text width */
+    text-align: center;
+}
+/* .statistics-content p {
+    font-size: 1rem;
+} */
+
+/* Button Styling */
+.btn-success {
+    background-color: #3ace4e;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.btn-success:hover {
+    background-color: #0c6b1f;
+}
+
+@media (max-width: 768px) {
+    .btn-success {
+        padding: 8px 25px;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-success {
+        padding: 6px 20px;
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+}
+
+/* Statistics Icons */
+.statistics-content .row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.statistics-content .col-6 {
+    width: auto; /* Flexible width */
+    flex: 1;
+    max-width: 200px; /* Adjust icon and text width */
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .statistics-content .col-6 {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .statistics-content .col-6 {
+        max-width: 120px;
+    }
+}
+
+/* Adjust for alignment */
+.triangle-down2 .mt-5 {
+    margin-top: 20px;
+}
+
+
+/* .statistics-content {
+  z-index: 2;
+  position: relative;
+} */
+
+/* Triangle Down Section */
+/* .triangle-down2 {
+    background-color: #003c79; 
+    width: 100%;
+    height: 1000px; 
+    border-radius: 30px;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 90%, 0 60%);
+    background-image: url('./Assets/testmonials.png'); 
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statistics-content {
+    z-index: 2;
+    position: relative;
+     max-width: 1200px; 
+} */
+
+/* Responsive Adjustments */
+/* @media (max-width: 1200px) {
+    .triangle-down2 {
+        height: 800px; 
+    }
+    .btn-success {
+        margin-top: 150px;
+        padding: 18px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .triangle-down2 {
+        height: 600px; 
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+    }
+    .btn-success {
+        margin-top: 100px;
+        padding: 6px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .triangle-down2 {
+        height: 500px; 
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    }
+    .btn-success {
+        margin-top: 50px;
+        padding: 5px 15px;
+    }
+} */
+
+/* World Map Section */
+/* .world-map {
+    height: 50px;
+    position: relative;
+    display: inline-block;
+} */
+/* .happy-students {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.happy-students p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.happy-students i {
+    color: red;
+    margin-right: 5px;
+} */
+
+/* Statistics Icons */
+/* i {
+    color: #0c0f10; 
+} */
+
+/* Button Styling */
+.btn-success {
+    background-color: #39B54A;
+    border: none;
+    padding: 10px 30px 5px 30px;
+    margin-top: 200px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #0a571a;
+}
+
+/* Statistics Section End */
+
+/* Feature Section  */
+.image-container{
+    background-image: url('./Assets/Frame.png');
+    background-size:cover;
+    height: max-content;
+}
+/* Quote 5 */
+
+.quote5 {
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .quote5 {
+        font-size: 26px;
+        line-height: 48px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .quote5 {
+        font-size: 42px;
+        line-height: 54px;
+    }
+}
+
+.quote6{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28.8px;
+    text-align: center;
+}
+/* Feature Section End */
+
+/* Testimonial Section */
+.triangle-down {
+    background-color: #003c79;
+    width: 100%;
+    height: 900px;
+    border-radius: 30px;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 90%, 0 60%);
+    background-image: url('./Assets/testmonials.png');
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-box {
+    background-color: white;
+    width: 900px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 40px 50px 40px 100px;
+}
+
+.q-symbol {
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: justify;
+}
+
+.testimonial-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.testi-pic {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial-name {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.testimonial-role {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    color: #667085;
+}
+
+.features {
+    background-color: #003c79;
+    background-image: url('./Assets/testmonials.png');
+}
+
+.carousel-inner {
+    overflow-x: hidden;
+    display: flex;
+}
+
+.bg-primary {
+    background-color: #fefefe !important;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #39B54A;
+    border: none;
+    padding: 10px 30px 5px 30px;
+    margin-top: 200px;
+}
+
+.btn-success:hover {
+    background-color: #0a571a;
+}
+
+/* Responsive Styles */
+
+/* Tablet and smaller screens */
+@media only screen and (max-width: 1024px) {
+    .triangle-down {
+        height: 600px;
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 85%, 0 70%);
+    }
+
+    .testimonial-box {
+        width: 60%;
+        padding: 20px 30px;
+        height: auto;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .testimonial-name {
+        font-size: 16px;
+    }
+
+    .testimonial-role {
+        font-size: 12px;
+    }
+
+    .testimonial-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .q-symbol {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn-success {
+        margin-top: 100px;
+        padding: 8px 25px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile Screens */
+@media only screen and (max-width: 768px) {
+    .triangle-down {
+        height: 400px;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0 80%);
+    }
+
+    .testimonial-box {
+        width: 80%;
+        padding: 15px 20px;
+        height: auto;
+        text-align: center;
+    }
+
+    .testimonial-text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .testimonial-name {
+        font-size: 14px;
+    }
+
+    .testimonial-role {
+        font-size: 10px;
+    }
+
+    .testimonial-pic {
+        width: 30px;
+        height: 30px;
+    }
+
+    .q-symbol {
+        width: 25px;
+        height: 25px;
+    }
+
+    .btn-success {
+        margin-top: 80px;
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+}
+
+/* Extra Small Mobile Screens */
+@media only screen and (max-width: 480px) {
+    .triangle-down {
+        height: 250px;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 95%, 0 85%);
+    }
+
+    .testimonial-box {
+        width: 90%;
+        padding: 10px 15px;
+    }
+
+    .testimonial-text {
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .testimonial-name {
+        font-size: 12px;
+    }
+
+    .testimonial-role {
+        font-size: 8px;
+    }
+
+    .testimonial-pic {
+        width: 20px;
+        height: 20px;
+    }
+
+    .q-symbol {
+        width: 20px;
+        height: 20px;
+    }
+
+    .btn-success {
+        margin-top: 50px;
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+}
+
+/* Testimonial Section end  */
+
+/* Banner4 */
+.quote7 {
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .quote7 {
+        font-size: 26px;
+        line-height: 48px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .quote7 {
+        font-size: 42px;
+        line-height: 54px;
+    }
+}
+.quote8{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28.8px;
+    text-align: center;
+}
+/* Banner4 end */
+
+/* Gallery Section */
+/* Base Styles */
+.gallery_Section {
+    background-image: url(../images/gallery.png);
+    background-size: cover; /* Ensure the image scales appropriately */
+    min-height: 720px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+.gallery_main .res {
+    padding: 0;
+    min-height: 250px;
+}
+
+.gallery_main .res .gallery_card {
+    position: relative;
+    height: 100%;
+}
+
+.play_video {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play_video img {
+    width: 100%;  /* Make the image fill the div's width */
+    height: 100%; /* Make the image fill the div's height */
+    object-fit: cover; /* Ensures the image covers the div without stretching */
+}
+
+.gallery_main .res:nth-child(odd) {
+    background-color: #DDDDDD;
+}
+
+.gallery_main .res:nth-child(even) {
+    background-color: #C4C4C4;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1024px) {
+    .gallery_Section {
+        background-size: contain; /* Make the background more flexible on smaller screens */
+        min-height: 500px;
+    }
+    
+    .gallery_main .res {
+        min-height: 200px; /* Reduce the height on tablets */
+    }
+
+    .play_video {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery_Section {
+        min-height: 400px; /* Adjust the minimum height for mobile screens */
+        padding: 10px;
+    }
+
+    .gallery_main .res {
+        min-height: 150px; /* Further reduce height for small screens */
+    }
+
+    .play_video {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gallery_Section {
+        background-size: 100%; /* Ensure the background image adjusts fully */
+        min-height: 300px; /* Further reduce height on smaller devices */
+        padding: 5px;
+    }
+
+    .gallery_main .res {
+        min-height: 120px;
+    }
+
+    .play_video {
+        width: 25px;
+        height: 25px;
+    }
+}
+/* Gallery Section End  */
+
+
+/* Footer Section:Start */
+/* Base Styles */
+.footer {
+    font-family: 'Poppins', sans-serif;
+    background-color: #118037;
+    color: #fff;
+    padding: 100px 0 20px;
+    clip-path: polygon(50% 0%, 0% 80px, 0% 100%, 100% 100%, 100% 80px);
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -40px; /* Moves the blue section higher */
+    left: 0;
+    right: 0;
+    height: 60px; /* Increase the height of the blue section */
+    background-color: #0056b3; /* Blue color */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 1;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 2; /* Keeps content above the blue strip */
+}
+
+.footer .footer-logo {
+    max-width: 250px;
+    margin-bottom: 15px;
+    margin-left: -22px;
+}
+
+.footer p {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.footer h5 {
+    color: #FFC700;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .footer-links li a:hover {
+    color: #FFC700;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.footer .social-icons a:hover {
+    color: #FFC700;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* Responsive Styles */
+
+/* Tablet and smaller screens */
+@media only screen and (max-width: 1024px) {
+    .footer {
+        padding: 80px 0 20px;
+    }
+
+    .footer h5 {
+        font-size: 1.2rem;
+    }
+
+    .footer .footer-logo {
+        margin-left: 0;
+    }
+
+    .footer .container {
+        padding: 0 20px;
+    }
+
+    .footer .social-icons a {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile screens */
+@media only screen and (max-width: 768px) {
+    .footer {
+        padding: 60px 0 20px;
+    }
+
+    .footer h5 {
+        font-size: 1rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    .footer .footer-logo {
+        max-width: 200px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    .footer .footer-links {
+        text-align: center;
+    }
+
+    .footer .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer .social-icons {
+        justify-content: center;
+    }
+
+    .footer .social-icons a {
+        margin-right: 8px;
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        padding-top: 15px;
+    }
+}
+
+/* Extra small mobile screens */
+@media only screen and (max-width: 480px) {
+    .footer {
+        padding: 50px 0 20px;
+    }
+
+    .footer h5 {
+        font-size: 0.9rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    .footer .footer-logo {
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .footer .social-icons a {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+    }
+}
