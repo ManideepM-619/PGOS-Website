@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Openings - Your School Name</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section (Same as index.html) -->
+    <header>
+        <!-- Add your existing header content here -->
+    </header>
+
+<!-- Core Values Section -->
+
+    <!-- Job Openings Section -->
+    <section class="job-openings">
+        <div class="container">
+            <h1 class="text-center mb-4">Job Openings</h1>
+            <p class="text-center mb-5">Follow openings in different job categories and apply for the role that suits you best</p>
+
+            <div class="filters mb-4">
+                <div class="filter-group">
+                    <label for="departmentFilter">Department</label>
+                    <select id="departmentFilter">
+                        <option value="">Select</option>
+                        <!-- Add department options here -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="roleFilter">Role</label>
+                    <select id="roleFilter">
+                        <option value="">Select</option>
+                        <!-- Add role options here -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="searchInput">Search</label>
+                    <input type="text" id="searchInput" placeholder="Search Openings">
+                </div>
+            </div>
+
+            <div class="job-list" id="jobList">
+                <!-- Job items will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section (Same as index.html) -->
+    <footer class="footer">
+        <!-- Add your existing footer content here -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
